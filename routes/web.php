@@ -15,11 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('public.index');
-})->name('home');
-
-Route::get('/{locale}', function () {
+Route::get('/{locale?}', function () {
     return view('public.index');
 })->name('home');
 
