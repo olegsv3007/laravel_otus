@@ -35,6 +35,6 @@ class OrganizationObserver
 
     private function flushOrganizationsCache()
     {
-        Cache::tags(Organization::CACHE_TAG)->flush();
+        Cache::tags(Organization::class)->flush();
     }
 }

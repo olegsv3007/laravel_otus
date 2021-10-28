@@ -11,6 +11,7 @@ class AddAdmin extends Migration
     private array $admin = [
         'name' => 'admin',
         'email' => 'admin@example.com',
+        'api_token' => 'uN2jSMa0i0OpEwet4hh5bzNvHvt2m54DA8VAXNLEPcwpZ57ovykBmyTd6GLs',
     ];
 
     public function up()
