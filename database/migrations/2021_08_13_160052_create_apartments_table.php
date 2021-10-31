@@ -12,7 +12,7 @@ class CreateApartmentsTable extends Migration
             $table->id();
             $table->boolean('active');
             $table->unsignedBigInteger('hotel_id');
-            $table->unsignedSmallInteger('number_of_rooms');
+            $table->unsignedSmallInteger('number_of_people');
             $table->string('title');
             $table->text('description');
             $table->float('price');

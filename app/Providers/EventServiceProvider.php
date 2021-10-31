@@ -7,11 +7,13 @@ use App\Models\City;
 use App\Models\Country;
 use App\Models\Hotel;
 use App\Models\Organization;
+use App\Models\Reservation;
 use App\Observers\ApartmentObserver;
 use App\Observers\CityObserver;
 use App\Observers\CountryObserver;
 use App\Observers\HotelObserver;
 use App\Observers\OrganizationObserver;
+use App\Observers\ReservationObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -33,5 +35,6 @@ class EventServiceProvider extends ServiceProvider
         Organization::observe(OrganizationObserver::class);
         Hotel::observe(HotelObserver::class);
         Apartment::observe(ApartmentObserver::class);
+        Reservation::observe(ReservationObserver::class);
     }
 }

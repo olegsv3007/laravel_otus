@@ -13,7 +13,6 @@ class Organization extends Model
     use SoftDeletes;
 
     public $timestamps = false;
-    public const CACHE_TAG = 'organization';
 
     protected $guarded = [];
 

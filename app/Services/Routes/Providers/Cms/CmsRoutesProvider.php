@@ -7,6 +7,7 @@ use App\Http\Controllers\Cms\Cities\CmsCitiesRestoreController;
 use App\Http\Controllers\Cms\Hotels\CmsHotelsRestoreController;
 use App\Http\Controllers\Cms\Images\CmsImagesRemoveController;
 use App\Http\Controllers\Cms\Organizations\CmsOrganizationsRestoreController;
+use App\Http\Controllers\Cms\Reservations\CmsReservationsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Cms\Countries\CmsCountriesController;
 use App\Http\Controllers\Cms\Cities\CmsCitiesController;
@@ -57,6 +58,14 @@ class CmsRoutesProvider
                     'parameters' => [
                         'apartments' => 'apartment_no_scope',
                         'hotels' => 'hotel_no_scope',
+                    ],
+                ]);
+
+                Route::resources([
+                    'reservations' => CmsReservationsController::class,
+                ], [
+                    'only' => [
+                        'index',
                     ],
                 ]);
             });

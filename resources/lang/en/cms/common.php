@@ -7,7 +7,7 @@ return [
         'settings' => 'Settings',
         'hotels' => 'Hotels',
         'apartments' => 'Apartments',
-        'orders' => 'Orders',
+        'reservations' => 'Reservations',
         'feedbacks' => 'Feedbacks',
         'countries' => 'Countries',
         'cities' => 'Cities',

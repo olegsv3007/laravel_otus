@@ -35,6 +35,6 @@ class CityObserver
 
     private function flushCityCache()
     {
-        Cache::tags(City::CACHE_TAG)->flush();
+        Cache::tags(City::class)->flush();
     }
 }

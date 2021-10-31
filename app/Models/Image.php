@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use \Illuminate\Support\Facades\Storage;
 
 class Image extends Model
 {
@@ -12,4 +13,12 @@ class Image extends Model
     public $timestamps = false;
 
     protected $guarded = [];
+
+    public function getImageSrcAttribute()
+    {
+        return asset(
+            Storage::disk('images')
+                ->url($this->imaginable_type::FOLDER_PHOTOS . '/' . $this->filename)
+        );
+    }
 }

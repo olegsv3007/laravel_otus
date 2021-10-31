@@ -16,10 +16,10 @@ class ApartmentFactory extends Factory
 
         return [
             'active' => $this->faker->boolean(95),
-            'number_of_rooms' => $this->faker->numberBetween(1, 4),
+            'number_of_people' => $this->faker->numberBetween(1, 4),
             'title' => $this->faker->text(60),
             'description' => $this->faker->realText(400),
-            'price' => $this->faker->randomFloat(2, 1, 1000000),
+            'price' => $this->faker->randomFloat(2, 1, 10000),
             'discount' => $discount,
             'main_image' => $image,
         ];

@@ -3,16 +3,17 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Status;
 
 class AddStatuses extends Migration
 {
     private array $statuses = [
-        'Ожидается подтверждение отелем',
-        'Ожидается оплата',
-        'Оплата получена',
-        'Бронь отклонена',
-        'Оплата просрочена',
-        'Выполнено',
+        Status::STATUS_PAYED,
+        Status::STATUS_PAYMENT_EXPIRED,
+        Status::STATUS_PENDING,
+        Status::STATUS_SUCCESS,
+        Status::STATUS_WAIT_FOR_PAYMENT,
+        Status::STATUS_CANCEL,
     ];
 
     public function up()
