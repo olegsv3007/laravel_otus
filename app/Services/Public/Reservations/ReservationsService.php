@@ -20,7 +20,7 @@ class ReservationsService
 
         $orderData['price'] = $totalPrice;
 
-        MakeReservation::dispatch($this->reservationsRepository, $orderData, $user, $apartment);
+        MakeReservation::dispatch($orderData, $user, $apartment);
     }
 
     public function getReservationsByUser(User $user, int $page)

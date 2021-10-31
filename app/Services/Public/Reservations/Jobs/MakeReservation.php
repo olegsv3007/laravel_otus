@@ -17,7 +17,6 @@ class MakeReservation implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public function __construct(
-        private ReservationsRepository $reservationsRepository,
         private array $orderData,
         private User $user,
         private Apartment $apartment,
@@ -26,6 +25,11 @@ class MakeReservation implements ShouldQueue
 
     public function handle()
     {
-        $this->reservationsRepository->store($this->orderData, $this->user, $this->apartment);
+        $this->getReservationsRepository()->store($this->orderData, $this->user, $this->apartment);
+    }
+
+    public function getReservationsRepository(): ReservationsRepository
+    {
+        return app(ReservationsRepository::class);
     }
 }
