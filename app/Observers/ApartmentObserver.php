@@ -35,6 +35,6 @@ class ApartmentObserver
 
     private function flushApartmentCache()
     {
-        Cache::tags(Apartment::CACHE_TAG)->flush();
+        Cache::tags(Apartment::class)->flush();
     }
 }

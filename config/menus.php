@@ -6,7 +6,7 @@ return [
     // value - путь к lang ресурсу
     'profile_menu' => [
         'profile' => 'public/common.profile_menu.profile',
-        'profile.order_history' => 'public/common.profile_menu.order_history',
+        'public.profile.order_history' => 'public/common.profile_menu.order_history',
         'profile.view_history' => 'public/common.profile_menu.view_history',
     ],
 
@@ -48,8 +48,8 @@ return [
             'icon' => 'icons.apartment',
             'role' => 'manager',
         ],
-        'cms.orders.index' => [
-            'title' => 'cms/common.menu.orders',
+        'cms.reservations.index' => [
+            'title' => 'cms/common.menu.reservations',
             'icon' => 'icons.book',
             'role' => 'manager',
         ],

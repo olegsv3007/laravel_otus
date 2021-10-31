@@ -12,7 +12,7 @@ class OrganizationRepository
 {
     public function get(): Collection
     {
-        return Cache::tags([Organization::CACHE_TAG])->remember(
+        return Cache::tags([Organization::class])->remember(
             'cms_all_organizations',
             config('cms.cache.lifetime'),
             function() {
@@ -27,7 +27,7 @@ class OrganizationRepository
         $linksLimit = $linksLimit ?? config('cms.pagination.links_limit');
         $currentPage = request()->get('page', 1);
 
-        return Cache::tags([Organization::CACHE_TAG])->remember(
+        return Cache::tags([Organization::class])->remember(
             "cms_paginated_organizations:all:per_page:{$itemsPerPage}:links_limit:{$linksLimit}:currentPage:{$currentPage}",
             config('cms.cache.lifetime'),
             function() use ($itemsPerPage, $linksLimit) {

@@ -35,6 +35,6 @@ class HotelObserver
 
     private function flushHotelCache()
     {
-        Cache::tags(Hotel::CACHE_TAG)->flush();
+        Cache::tags(Hotel::class)->flush();
     }
 }

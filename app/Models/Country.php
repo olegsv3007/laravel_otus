@@ -14,8 +14,6 @@ class Country extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public const CACHE_TAG = 'country';
-
     public  $timestamps = false;
     protected $guarded = [];
 

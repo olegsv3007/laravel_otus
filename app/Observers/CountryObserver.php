@@ -35,6 +35,6 @@ class CountryObserver
 
     private function flushCountryCache()
     {
-        Cache::tags(Country::CACHE_TAG)->flush();
+        Cache::tags(Country::class)->flush();
     }
 }

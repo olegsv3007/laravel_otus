@@ -12,11 +12,11 @@ class CreateReservationsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('apartment_id');
-            $table->timestamp('created_at');
+            $table->timestamps();
             $table->date('date_start');
             $table->date('date_end');
-            $table->float('price');
-            $table->unsignedBigInteger('status_id')->default(1);
+            $table->decimal('price');
+            $table->unsignedBigInteger('status_id');
 
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('apartment_id')->references('id')->on('apartments');

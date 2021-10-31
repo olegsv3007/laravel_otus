@@ -15,7 +15,7 @@ class HotelRepository
     public function get(): Collection
     {
 
-        return Cache::tags([Hotel::CACHE_TAG])->remember(
+        return Cache::tags([Hotel::class])->remember(
             "hotels:all",
             config('cms.cache.lifetime'),
             function() {
@@ -31,7 +31,7 @@ class HotelRepository
         $linksLimit = $linksLimit ?? config('cms.pagination.links_limit');
         $currentPage = request()->get('page', 1);
 
-        return Cache::tags([Hotel::CACHE_TAG, Organization::CACHE_TAG, City::CACHE_TAG])->remember(
+        return Cache::tags([Hotel::class, Organization::class, City::class])->remember(
             "hotels:all:organization:$organizationId:per_page:{$itemsPerPage}:links_limit:{$linksLimit}:currentPage:{$currentPage}",
             config('cms.cache.lifetime'),
             function() use ($organizationId, $itemsPerPage, $linksLimit) {
@@ -90,7 +90,7 @@ class HotelRepository
     public function getItemsForSelect(int $organizationId): Collection
     {
 
-        return Cache::tags([Hotel::CACHE_TAG])->remember(
+        return Cache::tags([Hotel::class])->remember(
             "organization:$organizationId:hotels_all",
             config('cms.cache.lifetime'),
             function() use ($organizationId) {

@@ -12,14 +12,13 @@ class Reservation extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
-
     protected $guarded = [];
 
-    protected $casts = [
-        'date_start' => 'date',
-        'date_end' => 'date',
-        'created_at' => 'datetime',
+    protected $dates = [
+        'date_start',
+        'date_end',
+        'created_at',
+        'updated_at_at',
     ];
 
     /**

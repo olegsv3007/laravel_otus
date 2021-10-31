@@ -14,7 +14,7 @@ class ApartmentRepository
 {
     public function get(): Collection
     {
-        return Cache::tags([Apartment::CACHE_TAG])->remember(
+        return Cache::tags([Apartment::class])->remember(
             'apartments:all',
             config('cms.cache.lifetime'),
             function() {
@@ -29,7 +29,7 @@ class ApartmentRepository
         $linksLimit = $linksLimit ?? config('cms.pagination.links_limit');
         $currentPage = request()->get('page', 1);
 
-        return Cache::tags([Apartment::CACHE_TAG, Hotel::CACHE_TAG])->remember(
+        return Cache::tags([Apartment::class, Hotel::class])->remember(
             "apartments:all:organization:$organizationId:per_page:{$itemsPerPage}:links_limit:{$linksLimit}:currentPage:{$currentPage}",
             config('cms.cache.lifetime'),
             function() use ($itemsPerPage, $linksLimit) {

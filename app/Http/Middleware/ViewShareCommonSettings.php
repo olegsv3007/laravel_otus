@@ -14,6 +14,7 @@ class ViewShareCommonSettings
     {
         View::share([
             'locale' => App::getLocale(),
+            'parameters' => $request->all(),
         ]);
 
         return $next($request);

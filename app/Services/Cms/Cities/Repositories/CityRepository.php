@@ -12,7 +12,7 @@ class CityRepository
 {
     public function get(): Collection
     {
-        return Cache::tags([City::CACHE_TAG])->remember(
+        return Cache::tags([City::class])->remember(
             'cms_all_cities',
             config('cms.cache.lifetime'),
             function () {
@@ -27,7 +27,7 @@ class CityRepository
         $linksLimit = $linksLimit ?? config('cms.pagination.links_limit');
         $currentPage = request()->get('page', 1);
 
-        return Cache::tags([City::CACHE_TAG, Country::CACHE_TAG])->remember(
+        return Cache::tags([City::class, Country::class])->remember(
             "cms_paginated_cities:all:per_page:{$itemsPerPage}:links_limit:{$linksLimit}:currentPage:{$currentPage}",
             config('cms.cache.lifetime'),
             function () use ($itemsPerPage, $linksLimit) {

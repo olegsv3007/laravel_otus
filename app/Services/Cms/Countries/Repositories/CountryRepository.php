@@ -11,7 +11,7 @@ class CountryRepository
 {
     public function get(): Collection
     {
-        return Cache::tags([Country::CACHE_TAG])
+        return Cache::tags([Country::class])
             ->remember(
                 'cmd_all_countries',
                 config('cms.cache.lifetime'),
@@ -26,7 +26,7 @@ class CountryRepository
         $linksLimit = $linksLimit ?? config('cms.pagination.links_limit');
         $currentPage = request()->get('page', 1);
 
-        return Cache::tags([Country::CACHE_TAG])->remember(
+        return Cache::tags([Country::class])->remember(
             "cms_paginated_countries:all:per_page:{$itemsPerPage}:links_limit:{$linksLimit}:currentPage:{$currentPage}",
             config('cms.cache.lifetime'),
             function() use ($itemsPerPage, $linksLimit) {

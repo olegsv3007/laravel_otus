@@ -22,7 +22,6 @@ class Apartment extends Model
     public $timestamps = false;
 
     public const FOLDER_PHOTOS = 'apartments';
-    public const CACHE_TAG = 'apartment';
 
     protected $guarded = [];
 
