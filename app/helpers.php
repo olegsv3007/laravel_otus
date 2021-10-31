@@ -13,5 +13,3 @@ if (!function_exists("get_url_segment")) {
         return '';
     }
 }
-
-
