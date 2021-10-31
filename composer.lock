@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b5b13b39b08aafabaee58a53f208e19",
+    "content-hash": "f1a063f5e63b8ee342e84ed64f818b84",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1069,16 +1069,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.68.0",
+            "version": "v8.67.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "08781be9c1e3f83b0c38ce9539e1dc4664e33a14"
+                "reference": "fc52acafd069aedc079bf8f17d1a4af4ef489b1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/08781be9c1e3f83b0c38ce9539e1dc4664e33a14",
-                "reference": "08781be9c1e3f83b0c38ce9539e1dc4664e33a14",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/fc52acafd069aedc079bf8f17d1a4af4ef489b1e",
+                "reference": "fc52acafd069aedc079bf8f17d1a4af4ef489b1e",
                 "shasum": ""
             },
             "require": {
@@ -1237,7 +1237,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-10-26T12:52:38+00:00"
+            "time": "2021-10-22T13:27:12+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -6207,12 +6207,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "135f806f6f503e8ec11773fb78b0eade8b738cb2"
+                "reference": "81ad4e7e58270afbc38e5fbd26edb45b884a2bfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/135f806f6f503e8ec11773fb78b0eade8b738cb2",
-                "reference": "135f806f6f503e8ec11773fb78b0eade8b738cb2",
+                "url": "https://api.github.com/repos/composer/composer/zipball/81ad4e7e58270afbc38e5fbd26edb45b884a2bfa",
+                "reference": "81ad4e7e58270afbc38e5fbd26edb45b884a2bfa",
                 "shasum": ""
             },
             "require": {
@@ -6298,7 +6298,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-26T19:48:56+00:00"
+            "time": "2021-10-25T12:16:20+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -7596,16 +7596,16 @@
         },
         {
             "name": "laravel/horizon",
-            "version": "v5.7.15",
+            "version": "v5.7.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "7bdc99af890966a683dbbfd8e69c8449d8d491b6"
+                "reference": "640df7c65c464f83cda66781636d816a0992b0b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/7bdc99af890966a683dbbfd8e69c8449d8d491b6",
-                "reference": "7bdc99af890966a683dbbfd8e69c8449d8d491b6",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/640df7c65c464f83cda66781636d816a0992b0b1",
+                "reference": "640df7c65c464f83cda66781636d816a0992b0b1",
                 "shasum": ""
             },
             "require": {
@@ -7667,22 +7667,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/horizon/issues",
-                "source": "https://github.com/laravel/horizon/tree/v5.7.15"
+                "source": "https://github.com/laravel/horizon/tree/v5.7.14"
             },
-            "time": "2021-10-26T15:50:24+00:00"
+            "time": "2021-10-12T15:20:07+00:00"
         },
         {
             "name": "laravel/sail",
-            "version": "v1.12.2",
+            "version": "v1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "1acae00ddb5c6ec4a2957fe42c0004f13cd17a7a"
+                "reference": "80f6cd93844e87ebc2e7310f9a9b9917473f5eb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/1acae00ddb5c6ec4a2957fe42c0004f13cd17a7a",
-                "reference": "1acae00ddb5c6ec4a2957fe42c0004f13cd17a7a",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/80f6cd93844e87ebc2e7310f9a9b9917473f5eb0",
+                "reference": "80f6cd93844e87ebc2e7310f9a9b9917473f5eb0",
                 "shasum": ""
             },
             "require": {
@@ -7729,7 +7729,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-10-26T21:37:54+00:00"
+            "time": "2021-10-12T15:38:11+00:00"
         },
         {
             "name": "laravel/telescope",
