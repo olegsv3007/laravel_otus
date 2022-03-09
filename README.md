@@ -1,5 +1,3 @@
-# Домашнее задание 6
-
 1. Склонировать репозиторий laradock
 ```shell
 git submodule init
@@ -13,7 +11,7 @@ cp .env.laradock ./laradock/.env
 
 3. Запустить docker compose
 ```shell
-docker-compose -f ./laradock/docker-compose.yml up -d nginx mysql redis
+docker-compose -f ./laradock/docker-compose.yml up -d nginx mysql redis memcached clickhouse
 ```
 
 4. Перейти в командную строку контейнера workspace
